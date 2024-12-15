@@ -1,66 +1,39 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable react/no-unstable-nested-components */
-/* eslint-disable react/react-in-jsx-scope */
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {CALENDAR, HOME, NOTIFICATION, PROFILE, SHIFT} from '../utils/router';
-import {Home, Notification, Profile, Shift, Calendar} from '../screens/index';
+import {HOME, PERSONEL, PROFILE, SHIFT, TALEPLER} from '../utils/router';
+import {Home, Profile} from '../screens/index';
 import ThemeColor from '../theme';
-import TabBarIcons from '../utils/tabbarıcon';
-import TabBarButton from '../utils/taBarButton';
-import {useNavigation} from '@react-navigation/native';
+import {StyleSheet} from 'react-native';
+import Personel from '../screens/personel/personel';
+import Talepler from '../screens/talepler';
+import AddShift from '../screens/addShift';
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
-  const navigation = useNavigation();
+function MyTabs({navigation}) {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) =>
-          TabBarIcons(route, focused, color, size),
-        tabBarActiveTintColor: ThemeColor.green,
-        tabBarInactiveTintColor: ThemeColor.darkGray,
-        tabBarLabelStyle: {fontSize: 12, fontWeight: 'bold'},
-        tabBarStyle: {
-          backgroundColor: ThemeColor.white,
-          borderRadius: 100,
-          elevation: 0,
-          shadowOpacity: 0.2,
-          borderTopWidth: 0,
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          paddingBottom: 10,
-        },
+      screenOptions={{
+        tabBarActiveTintColor: ThemeColor.PRIMARY,
+        tabBarInactiveTintColor: ThemeColor.TEXTGRAY,
+        tabBarStyle: styles.container,
         headerShown: false,
-      })}>
+      }}>
       <Tab.Screen name={HOME} component={Home} />
+      <Tab.Screen name={PERSONEL} component={Personel} />
+      <Tab.Screen name={SHIFT} component={AddShift} />
+      <Tab.Screen name={TALEPLER} component={Talepler} />
       <Tab.Screen name={PROFILE} component={Profile} />
-      <Tab.Screen
-        options={{
-          tabBarButton: props => (
-            <TabBarButton onPress={() => navigation.navigate(SHIFT)} />
-          ),
-          tabBarStyle: {
-            backgroundColor: ThemeColor.red,
-            width: 100,
-            borderRadius: 50,
-            elevation: 0,
-            shadowOpacity: 0.2,
-            borderTopWidth: 0,
-            position: 'absolute',
-            bottom: 0,
-          },
-        }}
-        name={SHIFT}
-        component={Shift}
-      />
-      <Tab.Screen name={CALENDAR} component={Calendar} />
-      <Tab.Screen name={NOTIFICATION} component={Notification} />
     </Tab.Navigator>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: ThemeColor.WHITE,
+    borderTopWidth: 1,
+    borderColor: ThemeColor.BORDERCOLOR,
+    height: 80,
+  },
+});
 
 export default MyTabs;

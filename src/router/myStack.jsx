@@ -1,30 +1,22 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {
-  CALENDAR,
-  NOTIFICATION,
-  PROFILE,
-  SHIFT,
-  SHIFTPERSON,
-} from '../utils/router';
-import {Notification, Profile, Shift, Calendar} from '../screens/index';
+import {PERSONEL, PROFILE, SHIFT, TALEPLER} from '../utils/router';
+import {Profile} from '../screens/index';
+import Talepler from '../screens/talepler';
+import Personel from '../screens/personel/personel';
+import AddShift from '../screens/addShift';
 import MyTabs from './myTab';
-import ShiftPerson from '../screens/addShift/shiftPerson';
 
 const Stack = createNativeStackNavigator();
 
 function MyStack() {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="MyTab" component={MyTabs} />
+      <Stack.Screen name={PERSONEL} component={Personel} />
+      <Stack.Screen name={SHIFT} component={AddShift} />
+      <Stack.Screen name={TALEPLER} component={Talepler} />
       <Stack.Screen name={PROFILE} component={Profile} />
-      <Stack.Screen name={SHIFT} component={Shift} />
-      <Stack.Screen name={CALENDAR} component={Calendar} />
-      <Stack.Screen name={NOTIFICATION} component={Notification} />
-      <Stack.Screen name={SHIFTPERSON} component={ShiftPerson} />
     </Stack.Navigator>
   );
 }

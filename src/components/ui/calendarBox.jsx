@@ -1,25 +1,27 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import ThemeColor from '../../theme';
 
 // create a component
-const AddShift = () => {
-  return (
-    <View style={styles.container}>
-      <Text>AddShift</Text>
-    </View>
-  );
+const CalendarBox = props => {
+  return <View {...props} style={styles.container}></View>;
 };
 
 // define your styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: 40,
+    height: 40,
+    borderWidth: 1,
+    borderColor: ThemeColor.BORDERCOLOR,
+    borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#2c3e50',
+    backgroundColor: ThemeColor.LIGHTGRAY,
   },
 });
 
 //make this component available to the app
-export default AddShift;
+export default CalendarBox;

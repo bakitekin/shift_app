@@ -1,4 +1,3 @@
-//import liraries
 import {StyleSheet} from 'react-native';
 import ThemeColor from '../theme';
 
@@ -6,6 +5,7 @@ const DefaultStyle = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+    backgroundColor: ThemeColor.LIGHTGRAY,
   },
   flex: {
     flex: 1,

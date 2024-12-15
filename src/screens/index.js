@@ -1,7 +1,7 @@
 import Home from './home';
 import Profile from './profile';
-import Notification from './notification';
-import Calendar from './calendar';
 import Shift from './addShift';
+import Personel from './personel/personel';
+import Talepler from './talepler';
 
-export {Home, Profile, Notification, Calendar, Shift};
+export {Home, Profile, Personel, Talepler, Shift};

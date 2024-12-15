@@ -1,13 +1,12 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import ThemeColor from '../../theme';
 
 // create a component
-const Notification = () => {
+const Personel = () => {
   return (
     <View style={styles.container}>
-      <Text>Notification</Text>
+      <Text>Personel</Text>
     </View>
   );
 };
@@ -18,9 +17,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: ThemeColor.gray,
+    backgroundColor: '#2c3e50',
   },
 });
 
 //make this component available to the app
-export default Notification;
+export default Personel;

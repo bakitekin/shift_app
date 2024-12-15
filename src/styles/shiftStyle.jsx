@@ -1,4 +1,3 @@
-//import liraries
 import {StyleSheet} from 'react-native';
 import ThemeColor from '../theme';
 

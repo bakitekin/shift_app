@@ -1,10 +1,8 @@
-//import liraries
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ThemeColor from '../../theme';
 
-// create a component
 const FlatActionButton = () => {
   return (
     <TouchableOpacity style={styles.container}>
@@ -13,7 +11,6 @@ const FlatActionButton = () => {
   );
 };
 
-// define your styles
 const styles = StyleSheet.create({
   container: {
     justifyContent: 'center',
@@ -32,5 +29,4 @@ const styles = StyleSheet.create({
   },
 });
 
-//make this component available to the app
 export default FlatActionButton;

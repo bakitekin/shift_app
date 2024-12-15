@@ -7,10 +7,29 @@ import Input from '../../components/ui/ınput';
 import Button from '../../components/ui/button';
 
 // create a component
-const Calendar = () => {
+const Talepler = () => {
   return (
     <ScrollView style={[DefaultStyle.container, {marginTop: 40}]}>
       <Text>Calendar</Text>
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+      <Input />
+      <Button />
+      <Input />
+      <Button />
       <Input />
       <Button />
     </ScrollView>
@@ -18,4 +37,4 @@ const Calendar = () => {
 };
 
 //make this component available to the app
-export default Calendar;
+export default Talepler;
