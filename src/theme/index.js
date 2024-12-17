@@ -24,6 +24,7 @@ const ThemeColor = {
   WHITE: '#FFFFFF',
   BLACK: '#181D27',
   BORDERCOLOR: '#E9EAEB',
+  BORDERCOLOR2: '#D5D7DA',
   BOX: '#FAFAFA',
 };
 

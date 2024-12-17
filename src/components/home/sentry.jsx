@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 5,
   },
   talepText: {
     textAlign: 'center',

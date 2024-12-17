@@ -1,20 +1,21 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
-const Plus = props => (
+import ThemeColor from '../../../theme';
+const CheckDrownSVG = props => (
   <Svg
-    width={20}
-    height={20}
-    viewBox="0 0 20 20"
+    width={12}
+    height={12}
+    viewBox="0 0 12 12"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     <Path
-      d="M9.99999 4.16666V15.8333M4.16666 9.99999H15.8333"
+      d="M3 4.5L6 7.5L9 4.5"
       stroke="#717680"
-      strokeWidth={1.67}
+      strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
   </Svg>
 );
-export default Plus;
+export default CheckDrownSVG;

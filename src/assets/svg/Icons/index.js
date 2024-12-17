@@ -1,33 +1,34 @@
-import Bell from './bell';
-import SoftBell from './softBell';
-import CheckDrown from './checkDrown';
-import Elements from './elements';
-import FeaturedIcon from './featuredIcon';
-import Check from './check';
-import Filter from './filter';
-import HomeIcon from './homeIcon';
-import Left from './left';
-import Map from './map';
-import Plus from './plus';
-import Search from './search';
-import User from './user';
-import Users from './users';
-import X from './x';
+// SVG Bileşenlerini İçe Aktar
+import BellSVG from './bellSVG';
+import SoftBellSVG from './softBellSVG';
+import CheckDrownSVG from './checkDrownSVG';
+import NotificationsSVG from './notificationsSVG';
+import FeaturedIconSVG from './featuredIcon';
+import CheckSVG from './checkSVG';
+import FilterSVG from './filterSVG';
+import HomeSVG from './homeSVG';
+import LeftSVG from './left';
+import MapSVG from './mapSVG';
+import PlusSVG from './plusSVG';
+import SearchSVG from './searchSVG';
+import UserSVG from './userSVG';
+import UsersSVG from './usersSVG';
+import XSVG from './xSVG';
 
 export {
-  Bell,
-  SoftBell,
-  CheckDrown,
-  Elements,
-  FeaturedIcon,
-  Check,
-  Filter,
-  HomeIcon,
-  Left,
-  Map,
-  Plus,
-  Search,
-  User,
-  Users,
-  X,
+  BellSVG,
+  SoftBellSVG,
+  CheckDrownSVG,
+  NotificationsSVG,
+  FeaturedIconSVG,
+  CheckSVG,
+  FilterSVG,
+  HomeSVG,
+  LeftSVG,
+  MapSVG,
+  PlusSVG,
+  SearchSVG,
+  UserSVG,
+  UsersSVG,
+  XSVG,
 };

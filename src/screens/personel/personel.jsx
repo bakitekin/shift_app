@@ -1,25 +1,64 @@
-//import liraries
-import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+// Import libraries
+import React from 'react';
+import {StyleSheet, SafeAreaView, View, FlatList} from 'react-native';
+import ArrowLeftSVG from '../../assets/svg/Icons/arrowLeftSVG';
+import {SearchSVG} from '../../assets/svg/Icons';
+import {
+  CustomAddButton,
+  CustomFilterButton,
+  CustomInput,
+  Header,
+} from '../../components/ui';
+import Users from '../../components/users/users';
 
-// create a component
+// Create a component
 const Personel = () => {
   return (
-    <View style={styles.container}>
-      <Text>Personel</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      {/* Header */}
+      <Header
+        title="Personel"
+        leftIcon={ArrowLeftSVG}
+        onLeftPress={() => console.log('Left icon pressed')}
+      />
+      {/* Search Bar and Actions */}
+      <View style={styles.actionRow}>
+        {/* Search Input */}
+        <CustomInput
+          placeholder="Personel Ara"
+          leftIcon={SearchSVG}
+          onChangeText={text => console.log(text)}
+          containerStyle={styles.searchInput} // Özel stil
+        />
+
+        {/* Filter Button */}
+        <CustomFilterButton />
+
+        {/* Add Button */}
+        <CustomAddButton />
+      </View>
+      <Users />
+    </SafeAreaView>
   );
 };
 
-// define your styles
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    padding: 10,
+  },
+  actionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#2c3e50',
+    marginRight: 10,
+    gap: 8,
+  },
+  searchInput: {
+    flex: 1,
+    marginRight: 0,
   },
 });
 
-//make this component available to the app
 export default Personel;

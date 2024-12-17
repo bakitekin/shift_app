@@ -1,9 +1,13 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import ThemeColor from '../../theme';
+import {useNavigation} from '@react-navigation/native';
+import {MAZERETGUNLERI} from '../../utils/router';
 
 // create a component
 const HomeCalendar = () => {
+  const navigaiton = useNavigation();
+
   const customDays = ['Pt', 'Sa', 'Ça', 'Pe', 'Cu', 'Ct', 'Pz']; // Monday first
 
   // Get today's date and the current month
@@ -70,6 +74,7 @@ const HomeCalendar = () => {
       <View style={styles.datesContainer}>
         {allBoxes.map((day, index) => (
           <TouchableOpacity
+            onPress={() => navigaiton.navigate(MAZERETGUNLERI, {day: day})}
             key={index}
             style={[
               styles.box,
@@ -108,9 +113,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: ThemeColor.WHITE,
     width: '100%',
-    height: 350, // Increased height to accommodate the extra row
+    height: 350,
     borderRadius: 12,
-    marginTop: 15,
+    marginTop: 5,
   },
   daysContainer: {
     flexDirection: 'row',

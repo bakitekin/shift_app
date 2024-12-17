@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, {G, Path, Defs, ClipPath, Rect} from 'react-native-svg';
-const Map = props => (
+const MapSVG = props => (
   <Svg
     width={20}
     height={20}
@@ -24,4 +24,4 @@ const Map = props => (
     </Defs>
   </Svg>
 );
-export default Map;
+export default MapSVG;

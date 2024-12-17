@@ -1,7 +1,8 @@
-import Home from './home';
-import Profile from './profile';
-import Shift from './addShift';
+import Home from './home/home';
+import Profile from './profile/profile';
 import Personel from './personel/personel';
-import Talepler from './talepler';
+import Talepler from './talepler/talepler';
+import MazeretGünleri from './home/mazeretGünleri';
+import NewUsers from './newUsers/newUsers';
 
-export {Home, Profile, Personel, Talepler, Shift};
+export {Home, Profile, Personel, Talepler, MazeretGünleri, NewUsers};

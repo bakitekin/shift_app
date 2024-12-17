@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
-const Check = props => (
+const xSVG = props => (
   <Svg
     width={12}
     height={12}
@@ -9,12 +9,12 @@ const Check = props => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     <Path
-      d="M10 3L4.5 8.5L2 6"
-      stroke="#027A48"
+      d="M9 3L3 9M3 3L9 9"
+      stroke={stroke} // Dinamik renk
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
   </Svg>
 );
-export default Check;
+export default xSVG;

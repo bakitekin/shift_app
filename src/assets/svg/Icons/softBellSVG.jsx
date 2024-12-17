@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, {Rect, Path} from 'react-native-svg';
-const SoftBell = props => (
+const SoftBellSVG = props => (
   <Svg
     width={46}
     height={46}
@@ -27,4 +27,4 @@ const SoftBell = props => (
     />
   </Svg>
 );
-export default SoftBell;
+export default SoftBellSVG;
