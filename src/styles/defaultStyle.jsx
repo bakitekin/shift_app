@@ -5,7 +5,7 @@ const DefaultStyle = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: ThemeColor.LIGHTGRAY,
+    backgroundColor: ThemeColor.light.LIGHTGRAY,
   },
   flex: {
     flex: 1,
@@ -26,16 +26,16 @@ const DefaultStyle = StyleSheet.create({
   },
   text: {
     fontSize: 25,
-    color: ThemeColor.black,
+    color: ThemeColor.light.BLACK,
     fontWeight: 'bold',
-    shadowColor: ThemeColor.black,
+    shadowColor: ThemeColor.light.BLACK,
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     elevation: 5,
   },
   label: {
     padding: 10,
-    color: ThemeColor.black,
+    color: ThemeColor.light.BLACK,
     fontWeight: '500',
     marginTop: 10,
   },

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
-const xSVG = props => (
+
+const XSVG = ({stroke, ...props}) => (
   <Svg
     width={12}
     height={12}
@@ -17,4 +18,5 @@ const xSVG = props => (
     />
   </Svg>
 );
-export default xSVG;
+
+export default XSVG;

@@ -14,6 +14,12 @@ import SearchSVG from './searchSVG';
 import UserSVG from './userSVG';
 import UsersSVG from './usersSVG';
 import XSVG from './xSVG';
+import TrashSVG from './trashSVG';
+import EditSVG from './editSVG';
+import CalendarSVG from './calendarSVG';
+import NigthSVG from './nigthSvg';
+import SpacialSVG from './spacial.SVG';
+import SpacialSoftSVG from './spacilSoftSVG';
 
 export {
   BellSVG,
@@ -31,4 +37,10 @@ export {
   UserSVG,
   UsersSVG,
   XSVG,
+  CalendarSVG,
+  EditSVG,
+  TrashSVG,
+  SpacialSVG,
+  SpacialSoftSVG,
+  NigthSVG,
 };

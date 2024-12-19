@@ -40,14 +40,15 @@ const Sentry = ({
         <View
           style={[
             styles.talepContainer,
-            {backgroundColor: ThemeColor.LIGHTORANGE},
+            {backgroundColor: ThemeColor.light.LIGHTORANGE},
           ]}>
           <View style={styles.talepBoxMazeret}>
-            <Text style={[styles.talepText, {color: ThemeColor.RED}]}>
+            <Text style={[styles.talepText, {color: ThemeColor.light.RED}]}>
               Talep
             </Text>
           </View>
-          <Text style={[styles.talepTextMessage, {color: ThemeColor.RED}]}>
+          <Text
+            style={[styles.talepTextMessage, {color: ThemeColor.light.RED}]}>
             {mazeret}
           </Text>
         </View>
@@ -56,15 +57,19 @@ const Sentry = ({
         <View
           style={[
             styles.talepContainer,
-            {backgroundColor: ThemeColor.LIGHTPRAMARY},
+            {backgroundColor: ThemeColor.light.LIGHTPRIMARY},
           ]}>
           <View style={styles.talepBoxTalep}>
-            <Text style={[styles.talepText, {color: ThemeColor.TEXTPRIMARY}]}>
+            <Text
+              style={[styles.talepText, {color: ThemeColor.light.TEXTPRIMARY}]}>
               Talep
             </Text>
           </View>
           <Text
-            style={[styles.talepTextMessage, {color: ThemeColor.TEXTPRIMARY}]}>
+            style={[
+              styles.talepTextMessage,
+              {color: ThemeColor.light.TEXTPRIMARY},
+            ]}>
             {talep}
           </Text>
         </View>
@@ -75,16 +80,16 @@ const Sentry = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: ThemeColor.WHITE,
+    backgroundColor: ThemeColor.light.WHITE,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR,
+    borderColor: ThemeColor.light.BORDERCOLOR,
     padding: 10,
     marginBottom: 10,
   },
   header: {
     borderBottomWidth: 1,
-    borderBottomColor: ThemeColor.BORDERCOLOR,
+    borderBottomColor: ThemeColor.light.BORDERCOLOR,
     paddingBottom: 10,
     marginBottom: 10,
   },
@@ -131,7 +136,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     justifyContent: 'center',
     alignContent: 'center',
-    borderColor: ThemeColor.BORDERTALEPRIMARY,
+    borderColor: ThemeColor.light.BORDERTALEPRIMARY,
   },
   talepBoxMazeret: {
     padding: 3,
@@ -140,7 +145,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     justifyContent: 'center',
     alignContent: 'center',
-    borderColor: ThemeColor.BADGEORANGE,
+    borderColor: ThemeColor.light.BADGEORANGE,
   },
   marginTop: {
     marginTop: 6,

@@ -78,10 +78,10 @@ const HomeCalendar = () => {
             key={index}
             style={[
               styles.box,
-              day === null && {backgroundColor: ThemeColor.LIGHTGRAY},
-              isCurrentDate(day) && {backgroundColor: ThemeColor.BLACK}, // Current date
-              isExcused(day) && {backgroundColor: ThemeColor.ORANGE}, // Excused date
-              isRequested(day) && {backgroundColor: ThemeColor.PRIMARY}, // Requested date
+              day === null && {backgroundColor: ThemeColor.light.LIGHTGRAY},
+              isCurrentDate(day) && {backgroundColor: ThemeColor.light.BLACK}, // Current date
+              isExcused(day) && {backgroundColor: ThemeColor.light.ORANGE}, // Excused date
+              isRequested(day) && {backgroundColor: ThemeColor.light.PRIMARY}, // Requested date
             ]}
             disabled={day === null} // Disable touch for empty boxes
           >
@@ -89,10 +89,10 @@ const HomeCalendar = () => {
               <Text
                 style={[
                   styles.dateText,
-                  isPastDate(day) && {color: ThemeColor.GRAY},
-                  isExcused(day) && {color: ThemeColor.WHITE},
-                  isRequested(day) && {color: ThemeColor.WHITE},
-                  isCurrentDate(day) && {color: ThemeColor.WHITE},
+                  isPastDate(day) && {color: ThemeColor.light.GRAY},
+                  isExcused(day) && {color: ThemeColor.light.WHITE},
+                  isRequested(day) && {color: ThemeColor.light.WHITE},
+                  isCurrentDate(day) && {color: ThemeColor.light.WHITE},
                   isCurrentDate(day) && {borderWidth: 0},
                   day === null && {color: 'transparent'},
                 ]}>
@@ -111,7 +111,7 @@ const HomeCalendar = () => {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: ThemeColor.WHITE,
+    backgroundColor: ThemeColor.light.WHITE,
     width: '100%',
     height: 350,
     borderRadius: 12,
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR,
+    borderColor: ThemeColor.light.BORDERCOLOR,
     borderRadius: 8,
     margin: 4,
   },

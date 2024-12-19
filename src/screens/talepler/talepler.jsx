@@ -1,18 +1,64 @@
-//import liraries
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
-import DefaultStyle from '../../styles/defaultStyle';
+import {View, SafeAreaView, StyleSheet, ScrollView} from 'react-native';
+import {CustomHeader} from '../../components/ui';
+import ArrowLeftSVG from '../../assets/svg/Icons/arrowLeftSVG';
+import {HOME} from '../../utils/router';
+import {useNavigation} from '@react-navigation/native';
+import NotificationCard from '../../components/natifitication/natificationCart';
 
-// create a component
 const Talepler = () => {
+  const navigation = useNavigation();
   return (
-    <ScrollView style={[DefaultStyle.container, {marginTop: 40}]}>
-      <View>
-        <Text>Talepler</Text>
-      </View>
-    </ScrollView>
+    <SafeAreaView>
+      <CustomHeader
+        title="Talepler"
+        leftIcon={ArrowLeftSVG}
+        onLeftPress={() => {
+          navigation.navigate(HOME);
+        }}
+      />
+      <ScrollView>
+        <NotificationCard
+          type="change" // veya "excuse"
+          status="pending" // "pending", "rejected", "approved"
+          date="12 Aralık"
+          time="08:00 - 16:00"
+          personName="Ahmet Yılmaz"
+          personTitle="Astsubay"
+        />
+        <NotificationCard
+          type="excuse"
+          status="approved"
+          date="12 Aralık"
+          time="08:00 - 16:00"
+          personName="Ahmet Yılmaz"
+          personTitle="Astsubay"
+        />
+        <NotificationCard
+          type="change"
+          status="rejected"
+          date="12 Aralık"
+          time="08:00 - 16:00"
+          personName="Ahmet Yılmaz"
+          personTitle="Astsubay"
+        />
+        <NotificationCard
+          type="excuse"
+          status="pending"
+          date="12 Aralık"
+          time="08:00 - 16:00"
+          personName="Ahmet Yılmaz"
+          personTitle="Astsubay"
+        />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
-//make this component available to the app
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+
 export default Talepler;

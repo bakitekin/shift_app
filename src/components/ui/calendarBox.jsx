@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR,
+    borderColor: ThemeColor.light.BORDERCOLOR,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: ThemeColor.LIGHTGRAY,
+    backgroundColor: ThemeColor.light.LIGHTGRAY,
   },
 });
 

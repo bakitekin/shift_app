@@ -12,8 +12,7 @@ import ThemeColor from '../../theme';
 import HomeCalendar from '../../components/home/homeCalendar';
 import Sentry from '../../components/home/sentry';
 import {DefaultStyle, DefaultText} from '../../styles';
-import {CheckDrownSVG} from '../../assets/svg/Icons';
-import CalendarSVG from '../../assets/svg/Icons/calendarSVG';
+import {CheckDrownSVG, CalendarSVG} from '../../assets/svg/Icons/index';
 
 const Home = () => {
   // Tarih bilgisi formatlama
@@ -150,19 +149,19 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     flexDirection: 'row',
-    backgroundColor: ThemeColor.WHITE,
+    backgroundColor: ThemeColor.light.WHITE,
     width: 140,
     height: 50,
     paddingHorizontal: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR,
+    borderColor: ThemeColor.light.BORDERCOLOR,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   dropdownText: {
     fontSize: 16,
-    color: ThemeColor.BLACK,
+    color: ThemeColor.light.BLACK,
     fontWeight: '400',
   },
   sectionHeader: {

@@ -2,8 +2,8 @@ import * as React from 'react';
 import Svg, {Rect, Path} from 'react-native-svg';
 const SoftBellSVG = props => (
   <Svg
-    width={46}
-    height={46}
+    width={56}
+    height={56}
     viewBox="0 0 46 46"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

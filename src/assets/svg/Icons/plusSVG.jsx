@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
-import ThemeColor from '../../../theme';
 
 const PlusSVG = ({
   width = 20,

@@ -11,7 +11,7 @@ const DefaultText = StyleSheet.create({
     fontWeight: 700,
     fontSize: 24,
     lineHeight: 32,
-    color: ThemeColor.TEXTGRAY,
+    color: ThemeColor.light.TEXTGRAY,
   },
 });
 

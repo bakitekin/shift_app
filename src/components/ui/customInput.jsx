@@ -32,7 +32,7 @@ const CustomInput = ({
         value={value}
         onChangeText={onChangeText}
         placeholder={placeholder}
-        placeholderTextColor={ThemeColor.TEXTGRAY}
+        placeholderTextColor={ThemeColor.light.TEXTGRAY}
         style={[styles.textInput, inputStyle]}
         {...props}
       />
@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     height: 44,
-    backgroundColor: ThemeColor.WHITE,
+    backgroundColor: ThemeColor.light.WHITE,
     margin: 10,
     paddingHorizontal: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR2,
+    borderColor: ThemeColor.light.BORDERCOLOR2,
   },
   iconWrapper: {
     justifyContent: 'center',
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     fontSize: 16,
-    color: ThemeColor.TEXTLIGHTGRAY,
+    color: ThemeColor.light.TEXTLIGHTGRAY,
   },
 });
 

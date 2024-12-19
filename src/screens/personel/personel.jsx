@@ -1,25 +1,30 @@
 // Import libraries
 import React from 'react';
-import {StyleSheet, SafeAreaView, View, FlatList} from 'react-native';
+import {StyleSheet, SafeAreaView, View} from 'react-native';
 import ArrowLeftSVG from '../../assets/svg/Icons/arrowLeftSVG';
 import {SearchSVG} from '../../assets/svg/Icons';
 import {
   CustomAddButton,
   CustomFilterButton,
+  CustomHeader,
   CustomInput,
-  Header,
 } from '../../components/ui';
 import Users from '../../components/users/users';
+import {HOME} from '../../utils/router';
+import {useNavigation} from '@react-navigation/native';
 
 // Create a component
 const Personel = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       {/* Header */}
-      <Header
+      <CustomHeader
         title="Personel"
         leftIcon={ArrowLeftSVG}
-        onLeftPress={() => console.log('Left icon pressed')}
+        onLeftPress={() => {
+          navigation.navigate(HOME);
+        }}
       />
       {/* Search Bar and Actions */}
       <View style={styles.actionRow}>

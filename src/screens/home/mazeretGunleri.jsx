@@ -1,5 +1,5 @@
 // import libraries
-import React, {useState} from 'react';
+import React from 'react';
 import {
   Text,
   StyleSheet,
@@ -14,7 +14,7 @@ import Sentry from '../../components/home/sentry';
 import {DefaultStyle, DefaultText} from '../../styles';
 import {CheckDrownSVG, CalendarSVG} from '../../assets/svg/Icons';
 
-const MazeretGünleri = () => {
+const MazeretGunleri = () => {
   // Tarih bilgisi formatlama
   const getFormattedDate = () => {
     const date = new Date();
@@ -151,19 +151,19 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     flexDirection: 'row',
-    backgroundColor: ThemeColor.WHITE,
+    backgroundColor: ThemeColor.light.WHITE,
     width: 130,
     height: 50,
     paddingHorizontal: 16,
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: ThemeColor.BORDERCOLOR,
+    borderColor: ThemeColor.light.BORDERCOLOR,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   dropdownText: {
     fontSize: 16,
-    color: ThemeColor.BLACK,
+    color: ThemeColor.light.BLACK,
     fontWeight: '400',
   },
   sectionHeader: {
@@ -173,4 +173,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MazeretGünleri;
+export default MazeretGunleri;

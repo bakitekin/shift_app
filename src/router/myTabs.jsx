@@ -41,8 +41,8 @@ const MyTabs = () => {
     }
 
     return React.cloneElement(IconComponent, {
-      stroke: isSelected ? ThemeColor.PRIMARY : ThemeColor.GRAY, // Aktif durumda renk değişimi
-      fill: isSelected ? ThemeColor.PRIMARY : 'none', // Gerekirse dolgu rengi
+      stroke: isSelected ? ThemeColor.light.PRIMARY : ThemeColor.light.GRAY, // Aktif durumda renk değişimi
+      fill: isSelected ? ThemeColor.light.PRIMARY : 'none', // Gerekirse dolgu rengi
     });
   };
 
@@ -53,7 +53,9 @@ const MyTabs = () => {
         <Text
           style={{
             color:
-              routeName === selectedTab ? ThemeColor.PRIMARY : ThemeColor.GRAY,
+              routeName === selectedTab
+                ? ThemeColor.light.PRIMARY
+                : ThemeColor.light.GRAY,
 
             fontSize: 12,
             marginTop: 5,
@@ -78,11 +80,11 @@ const MyTabs = () => {
       type="DOWN"
       shadowStyle={styles.shawdow}
       borderWidth={0.3}
-      borderColor={ThemeColor.GRAY}
+      borderColor={ThemeColor.light.GRAY}
       height={70}
       circleWidth={55}
-      bgColor={ThemeColor.WHITE}
-      tabBarActiveBackgroundColor={ThemeColor.PRIMARY}
+      bgColor={ThemeColor.light.WHITE}
+      tabBarActiveBackgroundColor={ThemeColor.light.PRIMARY}
       initialRouteName={HOME}
       screenOptions={{
         headerShown: false,
@@ -94,7 +96,11 @@ const MyTabs = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => navigate(NEWUSERS)}>
-            <PlusSVG strokeColor={ThemeColor.WHITE} width={35} height={35} />
+            <PlusSVG
+              strokeColor={ThemeColor.light.WHITE}
+              width={35}
+              height={35}
+            />
           </TouchableOpacity>
         </TouchableOpacity>
       )}
@@ -129,7 +135,7 @@ export const styles = StyleSheet.create({
     padding: 20,
   },
   shawdow: {
-    shadowColor: ThemeColor.WHITE,
+    shadowColor: ThemeColor.light.WHITE,
     shadowOffset: {
       width: 0,
       height: 0,
@@ -147,9 +153,9 @@ export const styles = StyleSheet.create({
     borderRadius: 50,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: ThemeColor.PRIMARY,
+    backgroundColor: ThemeColor.light.PRIMARY,
     bottom: 18,
-    shadowColor: ThemeColor.BLACK,
+    shadowColor: ThemeColor.light.BLACK,
     shadowOffset: {
       width: 0,
       height: 1,

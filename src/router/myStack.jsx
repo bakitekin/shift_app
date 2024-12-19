@@ -4,17 +4,19 @@ import {
   MAZERETGUNLERI,
   NEWUSERS,
   PERSONEL,
+  PERSONELDETAY,
   PROFILE,
   TALEPLER,
 } from '../utils/router';
 import {
-  MazeretGünleri,
   Profile,
   Talepler,
   Personel,
   NewUsers,
+  MazeretGunleri,
 } from '../screens/index';
 import MyTabs from './myTabs';
+import PersonelDetayı from '../screens/personel/personelDetay';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +28,8 @@ function MyStack() {
       <Stack.Screen name={NEWUSERS} component={NewUsers} />
       <Stack.Screen name={TALEPLER} component={Talepler} />
       <Stack.Screen name={PROFILE} component={Profile} />
-      <Stack.Screen name={MAZERETGUNLERI} component={MazeretGünleri} />
+      <Stack.Screen name={MAZERETGUNLERI} component={MazeretGunleri} />
+      <Stack.Screen name={PERSONELDETAY} component={PersonelDetayı} />
     </Stack.Navigator>
   );
 }
